@@ -5,7 +5,9 @@ export const Section = styled.section`
   padding-top: var(--global-header);
   position: relative;
   z-index: 10;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   place-items: center;
   min-height: 720px;
   max-height: 90dvh;
@@ -22,6 +24,7 @@ export const Picture = styled.picture`
   position: absolute;
   inset: 0;
   display: flex;
+  align-items: center;
   min-height: 100%;
   object-fit: center;
   aspect-ratio: 3 / 4;
@@ -45,10 +48,15 @@ export const Overlay = styled.div`
 `;
 
 export const Container = styled.div`
+  position: absolute;
   display: flex;
-  padding: 0 4rem;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  top: 15%;
+  left: 5%;
   z-index: 30;
-  left: 0px;
+  width: 90%;
 `;
 
 export const Content = styled.div`
@@ -73,7 +81,11 @@ export const Title = styled.h1`
 
 export const Paragraph = styled.p`
   color: white;
-  font-size: var(--body-lg);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  text-align: left;
+  width: 40%;
+  margin-top: 0px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -178,7 +190,64 @@ export const Main = styled.div`
 `;
 
 export const Heading = styled.h1`
-  width: 25%;
   font-size: 3.5rem;
   color: #fff;
+  text-align: left;
+  line-height: 1.2;
+  width: 40%;
+`;
+
+export const FreeTrail = styled.a`
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #000;
+`;
+
+export const FreeTrailContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  color: #fff;
+  width: 100%;
+`;
+
+export const Trail = styled.p`
+  width: 25%;
+  padding-left: 1rem;
+  text-align: left;
+  font-size: medium;
+`;
+
+export const BottomContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const StoryContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 20rem;
+`;
+
+export const PlayContianer = styled.a`
+  background-color: transparent;
+  text-decoration: none;
+  border: 1px solid #f2f4f4;
+  border-radius: 100px;
+  padding: 0.75rem 0.75rem;
+  width: auto;
+  font-size: 1rem;
+  line-height: 1;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;

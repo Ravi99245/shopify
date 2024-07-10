@@ -1,18 +1,20 @@
 import Header from "../Header";
 
+import { FaPlay } from "react-icons/fa";
+
 import {
   Section,
   Picture,
   Overlay,
   Heading,
   Container,
-  Content,
-  Title,
   Paragraph,
-  ButtonContainer,
-  Button,
-  Disclaimer,
-  VideoButton,
+  FreeTrail,
+  FreeTrailContainer,
+  Trail,
+  BottomContainer,
+  StoryContainer,
+  PlayContianer,
 } from "./styledComponent";
 
 const Home = () => (
@@ -49,7 +51,25 @@ const Home = () => (
     <Container>
       <div>
         <Heading>Making Commerce Better for Everyone</Heading>
+        <Paragraph>
+          Shopify is supporting the next generation of entreprenures, the world
+          biggest brands, and every one in between
+        </Paragraph>
       </div>
+      <BottomContainer>
+        <FreeTrailContainer>
+          <FreeTrail href="https://accounts.shopify.com/store-create?language=en&locale=en&signup_page=https%3A%2F%2Fwww.shopify.com%2F&signup_types[]=paid_trial_experience">
+            Start Free Trail
+          </FreeTrail>
+          <Trail>Get 3 days free then 1 month for ₹20.</Trail>
+        </FreeTrailContainer>
+        <StoryContainer>
+          <PlayContianer href="#/modal/video">
+            <FaPlay style={{ marginRight: "10px" }} />
+            Watch ths Shopify story
+          </PlayContianer>
+        </StoryContainer>
+      </BottomContainer>
     </Container>
   </Section>
 );

@@ -1,7 +1,5 @@
 import { Component } from "react";
 
-import { FaAngleDown, FaAngleUp } from "react-icons/fa";
-
 import {
   HeaderComponent,
   AnchorElement,
