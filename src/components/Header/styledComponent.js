@@ -6,14 +6,21 @@ export const Shopify = styled(FaShopify)`
   fill: #95bf47;
   width: 40px;
   height: 40px;
+  margin-right: 8px;
 `;
 
 export const HeaderComponent = styled.header`
-  position: absolute;
-  margin: 0 5.65rem;
+  margin: 0 8rem;
   top: 0;
   width: 100%;
   display: flex;
+  padding: 0 3rem;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  justify-content: space-evenly;
+  background: ${(props) =>
+    props.headerBg === "transparent" ? "transparent" : "#000"};
 `;
 
 export const Title = styled.h1`
@@ -47,6 +54,7 @@ export const List = styled.ul`
 export const ListItem = styled.li`
   display: flex;
   align-items: center;
+  margin-left: 1.5rem;
 `;
 
 export const Down = styled(FaAngleDown)`
@@ -89,4 +97,39 @@ export const Pricing = styled.a`
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const WhatsNew = styled.a`
+  background-color: rgb(0 222 227);
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  border-radius: 9999px;
+  padding: 0.6rem 16px;
+  text-decoration: none;
+`;
+
+export const WhatSpan = styled.span`
+  text-decoration: none;
+  font-weight: 700;
+  color: #000;
+  margin-left: 8px;
+`;
+
+export const LoginContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const FreeTrail = styled.a`
+  text-decoration: none;
+  background-color: #fff;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #000;
 `;

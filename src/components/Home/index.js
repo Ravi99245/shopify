@@ -4,6 +4,7 @@ import {
   Section,
   Picture,
   Overlay,
+  Heading,
   Container,
   Content,
   Title,
@@ -45,6 +46,11 @@ const Home = () => (
       />
     </Picture>
     <Overlay />
+    <Container>
+      <div>
+        <Heading>Making Commerce Better for Everyone</Heading>
+      </div>
+    </Container>
   </Section>
 );
 

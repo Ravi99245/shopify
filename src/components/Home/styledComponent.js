@@ -45,20 +45,10 @@ export const Overlay = styled.div`
 `;
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gutter);
-  place-self: end;
-  padding: 12px 0;
+  display: flex;
+  padding: 0 4rem;
   z-index: 30;
-
-  @media (min-width: 640px) {
-    grid-template-columns: repeat(8, 1fr);
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(12, 1fr);
-  }
+  left: 0px;
 `;
 
 export const Content = styled.div`
@@ -185,4 +175,10 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const Heading = styled.h1`
+  width: 25%;
+  font-size: 3.5rem;
+  color: #fff;
 `;

@@ -13,10 +13,14 @@ import {
   Down,
   Button,
   Pricing,
+  WhatsNew,
+  WhatSpan,
+  LoginContainer,
+  FreeTrail,
 } from "./styledComponent";
 
 class Header extends Component {
-  state = { solutions: false, resources: false };
+  state = { solutions: false, resources: false, headerBg: "transparent" };
 
   updateSolutions = () => {
     this.setState((prevState) => ({
@@ -30,10 +34,26 @@ class Header extends Component {
     }));
   };
 
+  handleScroll = () => {
+    if (window.scrollY > 0) {
+      this.setState({ headerBg: "black" });
+    } else {
+      this.setState({ headerBg: "transparent" });
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
   render() {
-    const { solutions, resources } = this.state;
+    const { solutions, resources, headerBg } = this.state;
     return (
-      <HeaderComponent>
+      <HeaderComponent headerBg={headerBg}>
         <div>
           <AnchorElement href="https://www.shopify.com/">
             <Shopify />
@@ -61,7 +81,7 @@ class Header extends Component {
               <Pricing href="/enterprise">Enterprise</Pricing>
             </ListItem>
             <ListItem>
-              <a href="editions/summer2024">
+              <WhatsNew href="editions/summer2024">
                 <svg
                   width="25"
                   height="24"
@@ -84,10 +104,23 @@ class Header extends Component {
                     fill="black"
                   ></path>
                 </svg>
-              </a>
+                <WhatSpan>What's new</WhatSpan>
+              </WhatsNew>
             </ListItem>
           </List>
         </Nav>
+        <LoginContainer>
+          <List>
+            <ListItem>
+              <Pricing href="/login">Log in</Pricing>
+            </ListItem>
+            <ListItem>
+              <FreeTrail href="https://accounts.shopify.com/store-create?language=en&locale=en&signup_page=https%3A%2F%2Fwww.shopify.com%2F&signup_types[]=paid_trial_experience">
+                Start Free trail
+              </FreeTrail>
+            </ListItem>
+          </List>
+        </LoginContainer>
       </HeaderComponent>
     );
   }
