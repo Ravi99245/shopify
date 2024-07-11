@@ -251,3 +251,7 @@ export const PlayContianer = styled.a`
   align-items: center;
   justify-content: space-between;
 `;
+
+export const DetaialsContainer = styled.div`
+  width: 100%;
+`;
